@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-topmenu',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topmenu.component.css']
 })
 export class TopmenuComponent implements OnInit {
-  title: 'Automata Simulator';
+  title = 'Automata Simulator';
+  tabs = [['FSM','fsm'],['Pushdown','pushdown'],['Turing Machine','turing']];
+
   constructor() { }
 
   ngOnInit() {

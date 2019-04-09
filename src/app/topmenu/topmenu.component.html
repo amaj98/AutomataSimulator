@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-      <a class="navbar-brand"> <font color="gainsboro">Automata Simulator</font></a>
+      <a class="navbar-brand"> <font color="gainsboro"> {{title}}</font></a>
       <ul class="nav navbar-nav" routerLinkActive="active">
-          <li class="nav-item"><a class="nav-link" routerLink="fsm">FSM</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="pushdown">Pushdown</a></li>
-          <li class="nav-item"><a class="nav-link" routerLink="turing">Turing Machine</a></li>
+          <li *ngFor="let tab of tabs"
+           class="nav-item"><a class="nav-link" routerLink={{tab[1]}}>{{tab[0]}}</a>
+          </li>
       </ul>
   </div>
 </nav>
