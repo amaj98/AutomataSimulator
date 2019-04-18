@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fsmpage.component.css']
 })
 export class FsmpageComponent implements OnInit {
-
+  tabs: string[] = ['Edit','Info','Determinism','Simulate','Examples'];
+  currtab = this.tabs[0];
   constructor() { }
 
   ngOnInit() {
