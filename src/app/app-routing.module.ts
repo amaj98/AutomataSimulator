@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'turing', component: TuringpageComponent }
 ];
 
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
