@@ -1,0 +1,26 @@
+@media (min-width: 576px){
+  .ctrlbar-div{
+  padding:0 1rem 0 0; font-size:1rem;
+  }
+}
+.fsm-ctrlbar{
+  margin:5;
+  padding-right:1rem;
+  padding-left:1rem;
+}
+
+.navbar{
+  padding:0px;
+}
+
+.ctrlBarGroupHeader{
+  text-align:center;
+  width:100%;
+  padding:5px;
+}
+
+@media (max-width:992px) {
+  .nav a{
+    padding: .25rem .5rem;
+  }
+}
