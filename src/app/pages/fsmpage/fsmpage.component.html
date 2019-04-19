@@ -2,19 +2,19 @@
     <h3 class = "text-center text-white"> Finite State Automata </h3>
 </div>
 <div class = "row">
-  <div class = "col-2">
-    <ul class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <li *ngFor="let tab of tabs;" 
-        class = "btn btn-dark" (click)="currtab = tab" aria-controls="one" role="tab" data-toggle="pill">{{tab}}
-      </li>
-    </ul>
+  <div class = "col-2 bg-secondary">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <div *ngFor="let tab of tabs;" >
+        <div class = "btn-fluid btn-dark" (click)="currtab = tab" aria-controls="one" role="tab" data-toggle="pill">{{tab}} </div>
+      </div>
+    </div>
   </div>
 
   <div class="tab-content">
-    <div *ngIf="currtab === tabs[0]" role="tabpanel" class="tab-pane active" id="one">Edit Automata</div>
-    <div *ngIf="currtab === tabs[1]" role="tabpanel" class="tab-pane active" id="two">Automata Information</div>
-    <div *ngIf="currtab === tabs[2]" role="tabpanel" class="tab-pane active" id="two">Convert Non-Deterministic Automata to a Deterministic one</div>
-    <div *ngIf="currtab === tabs[3]" role="tabpanel" class="tab-pane active" id="two">Simulate Automata</div>
+    <div *ngIf="currtab === tabs[0]" role="tabpanel" class="tab-pane active" id="edit">Edit Automata</div>
+    <div *ngIf="currtab === tabs[1]" role="tabpanel" class="tab-pane active" id="info">Automata Information</div>
+    <div *ngIf="currtab === tabs[2]" role="tabpanel" class="tab-pane active" id="deter">Convert Non-Deterministic Automata to a Deterministic one</div>
+    <div *ngIf="currtab === tabs[3]" role="tabpanel" class="tab-pane active" id="sim">Simulate Automata</div>
     <div *ngIf="currtab === tabs[4]" role="tabpanel" class="tab-pane active" id="two">Example Finite State Automata</div>
   </div>
 </div>
