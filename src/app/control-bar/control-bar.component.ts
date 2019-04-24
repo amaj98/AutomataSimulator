@@ -8,13 +8,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ControlBarComponent {
 
   @Input() isValid = false;
-  @Input() set mode(val) { this.currentMode1 = val; }
+  @Input() set mode(val) { this.currentMode = val; }
   @Output() modeChange: EventEmitter<string> = new EventEmitter<string>();
   @Output() zoom: EventEmitter<number> = new EventEmitter<number>();
 
-  private currentMode1 = 'pointer';
-  get currentMode() { return this.currentMode1; }
-  set currentMode(val: string) { this.currentMode1 = val; this.modeChange.emit(val); }
+  private currentMode = 'pointer';
+  getcurrentMode() { return this.currentMode; }
+  setcurrentMode(val: string) { this.currentMode = val; this.modeChange.emit(val); }
   constructor() { }
 
   // property click event handlers

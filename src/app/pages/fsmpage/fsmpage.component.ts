@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ControlBarComponent} from '../../control-bar/control-bar.component'
 
 @Component({
   selector: 'app-fsmpage',

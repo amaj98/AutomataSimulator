@@ -1,21 +1,23 @@
 <div class = "jumbotron-fluid bg-secondary">
     <h3 class = "text-center text-white"> Finite State Automata </h3>
 </div>
-<div class = "row h-100">
-  <div class = "col-2 hidden-md-down bg-secondary">
-    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <div *ngFor="let tab of tabs;" >
-        <div class = "btn-fluid btn-dark" (click)="currtab = tab" aria-controls="one" role="tab" data-toggle="pill">{{tab}} </div>
+<div class = "container-fluid">
+  <div class = "row">
+    <div class = "col-2 hidden-md-down bg-secondary">
+      <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <div *ngFor="let tab of tabs;" >
+          <div class = "btn-fluid btn-dark" (click)="currtab = tab" aria-controls="one" role="tab" data-toggle="pill">{{tab}} </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="tab-content">
-    <div *ngIf="currtab === tabs[0]" role="tabpanel" class="tab-pane active" id="edit">Edit Automata</div>
-    <div *ngIf="currtab === tabs[1]" role="tabpanel" class="tab-pane active" id="info">Automata Information</div>
-    <div *ngIf="currtab === tabs[2]" role="tabpanel" class="tab-pane active" id="deter">Convert Non-Deterministic Automata to a Deterministic one</div>
-    <div *ngIf="currtab === tabs[3]" role="tabpanel" class="tab-pane active" id="sim">Simulate Automata</div>
-    <div *ngIf="currtab === tabs[4]" role="tabpanel" class="tab-pane active" id="two">Example Finite State Automata</div>
+    <div class="col w-100 h-100">
+      <div *ngIf="currtab === tabs[0]" role="tabpanel" class="tab-pane active" id="edit"> <app-drawfsm></app-drawfsm> </div>
+      <div *ngIf="currtab === tabs[1]" role="tabpanel" class="tab-pane active" id="info">Automata Information</div>
+      <div *ngIf="currtab === tabs[2]" role="tabpanel" class="tab-pane active" id="deter">Convert Non-Deterministic Automata to a Deterministic one</div>
+      <div *ngIf="currtab === tabs[3]" role="tabpanel" class="tab-pane active" id="sim">Simulate Automata</div>
+      <div *ngIf="currtab === tabs[4]" role="tabpanel" class="tab-pane active" id="two">Example Finite State Automata</div>
+    </div>
   </div>
 </div>
 
