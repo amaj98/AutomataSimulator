@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DrawfsmComponent implements OnInit {
 
-  constructor() { }
+  constructor(){ }
 
-  ngOnInit() {
+  ngOnInit(){
+
   }
 
 }
