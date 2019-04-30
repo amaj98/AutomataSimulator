@@ -7,6 +7,8 @@ import { TopmenuComponent } from './topmenu/topmenu.component';
 import { FsmpageComponent } from './pages/fsmpage/fsmpage.component';
 import { TuringpageComponent } from './pages/turingpage/turingpage.component';
 import { PushdownpageComponent } from './pages/pushdownpage/pushdownpage.component';
+import { ControlBarComponent } from './control-bar/control-bar.component';
+import { CanvasComponent } from './canvas/canvas.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,10 @@ import { PushdownpageComponent } from './pages/pushdownpage/pushdownpage.compone
     TopmenuComponent,
     FsmpageComponent,
     TuringpageComponent,
-    PushdownpageComponent
+    PushdownpageComponent,
+    ControlBarComponent,
+    CanvasComponent,
+    FsmpageComponent
   ],
   imports: [
     BrowserModule,

@@ -10,8 +10,13 @@
     </div>
   </div>
 
-  <div class="tab-content">
-    <div *ngIf="currtab === tabs[0]" role="tabpanel" class="tab-pane active" id="edit">Edit Automata</div>
+  <div class="col-7 tab-content">
+    <div
+      *ngIf="currtab === tabs[0]" role="tabpanel" class="tab-pane active h-100 w-100" id="edit">
+      <app-canvas background='lightblue'></app-canvas>
+      <app-control-bar></app-control-bar>
+    </div>
+
     <div *ngIf="currtab === tabs[1]" role="tabpanel" class="tab-pane active" id="info">Automata Information</div>
     <div *ngIf="currtab === tabs[2]" role="tabpanel" class="tab-pane active" id="deter">Convert Non-Deterministic Automata to a Deterministic one</div>
     <div *ngIf="currtab === tabs[3]" role="tabpanel" class="tab-pane active" id="sim">Simulate Automata</div>
@@ -21,4 +26,4 @@
 
 
 
-  
+
