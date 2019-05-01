@@ -1,11 +1,12 @@
 .col-3{
     height:100vh;
 }
-.bottomdiv{
-    border: 1px solid black;
-    height: 50px;
-    width: 100%;
-    position:absolute;
-    left:0;
-    bottom:0;
+.canvas{
+    height: 70vh;
+}
+.ctrlbar{
+    height: 10vh;
+}
+.bottom{
+    height: 20vh;
 }
