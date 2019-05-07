@@ -4,7 +4,7 @@
             <span class = "align-text-top text-light name">Mode</span>
             <div class = "card">
                 <div class = "text-center">
-                    <div class = "btn btn-dark" (click)='onModeChange("pointer")' [ngClass]='{"active": mode==="pointer"}'><span class="fas fa-mouse-pointer" placement='top'></span></div>
+                    <div class = "btn btn-dark" ngbTooltip='Mouse Pointer' placement='top' (click)='onModeChange("pointer")' [ngClass]='{"active": mode==="pointer"}'><span class="fas fa-mouse-pointer" placement='top'></span></div>
                     <div class = "btn btn-dark" (click)='onModeChange("state")' [ngClass]='{"active": mode ==="state"}'><span class="fas fa-cogs" placement='top'></span></div>
                     <div class = "btn btn-dark" (click)='onModeChange("transition")' [ngClass]='{"active": mode === "transition"}'><span class="fas fa-recycle" placement='top'></span></div>
                 </div>
