@@ -1,0 +1,35 @@
+<div class="navbar navbar-dark bg-dark">     
+    <div class = "row justify-content-between">
+        <div class = col-4>
+            <span class = "align-text-top text-light name">Mode {{_currentMode}}</span>
+            <div class = "card">
+                <div class = "text-center">
+                    <div class = "btn btn-dark" (click)='onModeChange("pointer")' [ngClass]='{"active": mode==="pointer"}'><span class="fas fa-mouse-pointer" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click)='onModeChange("state")' [ngClass]='{"active": mode ==="state"}'><span class="fas fa-cogs" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click)='onModeChange("transition")' [ngClass]='{"active": mode === "transition"}'><span class="fas fa-recycle" placement='top'></span></div>
+                </div>
+            </div>
+        </div>
+        <div class = col-4>
+            <span class = "align-text-top text-light name">File</span>
+            <div class = "card">
+                <div class = "text-center">
+                    <div class = "btn btn-dark" (click) = 'onNew()' ><span class="fas fa-file" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click) = 'onLoad()'><span class="fas fa-folder-open" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click) = 'onSave()'><span class="fas fa-save" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click) = 'onExport()'><span class="fas fa-image" placement='top'></span></div>
+                </div>
+            </div>
+        </div>
+        <div class = col-4>
+            <span class = "align-text-top text-light name">Zoom</span>
+            <div class = "card">
+                <div class = "text-center">
+                    <div class = "btn btn-dark" (click) = 'onZoom(1)'><span class="fas fa-search-plus" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click) = 'onZoom(-1)'><span class="fas fa-search-minus" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click) = 'onZoom(0)'><span class="fas fa-search" placement='top'></span></div>
+                </div>
+            </div>
+        </div>      
+    </div>
+</div>

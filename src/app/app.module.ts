@@ -8,6 +8,7 @@ import { FsmpageComponent } from './pages/fsmpage/fsmpage.component';
 import { TuringpageComponent } from './pages/turingpage/turingpage.component';
 import { PushdownpageComponent } from './pages/pushdownpage/pushdownpage.component';
 import { DrawfsmComponent } from './pages/fsmpage/drawfsm/drawfsm.component';
+import { CtrlbarComponent } from './pages/fsmpage/ctrlbar/ctrlbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DrawfsmComponent } from './pages/fsmpage/drawfsm/drawfsm.component';
     FsmpageComponent,
     TuringpageComponent,
     PushdownpageComponent,
-    DrawfsmComponent
+    DrawfsmComponent,
+    CtrlbarComponent
   ],
   imports: [
     BrowserModule,
