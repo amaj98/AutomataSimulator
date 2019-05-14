@@ -23,4 +23,11 @@ export class DrawfsmComponent implements OnInit {
     if($event === 0){this.zoom = 0;}
     else{this.zoom+=$event;}
   }
+
+  isState(){
+    return this.selected instanceof FsmState;
+  }
+  isTrans(){
+    return this.selected instanceof FsmTransition;
+  }
 }

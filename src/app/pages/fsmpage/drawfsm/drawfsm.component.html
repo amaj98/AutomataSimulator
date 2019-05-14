@@ -6,8 +6,9 @@
   </div>
   <div class = "col-3 hidden-md-down bg-secondary text-white">
     <div class = "jumbotron panel bg-dark">
-        Control panel: let user change state names and set start/final states;
+        <div *ngIf="selected === null"><h4>Select a state or transition.</h4></div>
+        <div *ngIf= "isState()">is state, allow user to set start and final states and change state names</div>
+        <div *ngIf= "isTrans()">is transition, allow user to set the transition character(s)</div>
     </div>
-      
   </div>
 </div>
