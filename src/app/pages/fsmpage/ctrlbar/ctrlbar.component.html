@@ -5,8 +5,8 @@
             <div class = "card">
                 <div class = "text-center">
                     <div class = "btn btn-dark" (click)='onModeChange("pointer")' [ngClass]='{"btn-outline-primary": currentMode ==="pointer"}'><span class="fas fa-mouse-pointer" placement='top'></span></div>
-                    <div class = "btn btn-dark" (click)='onModeChange("state")' [ngClass]='{"btn-outline-danger": currentMode ==="state"}'><span class="fas fa-cogs" placement='top'></span></div>
-                    <div class = "btn btn-dark" (click)='onModeChange("transition")' [ngClass]='{"btn-outline-success": currentMode === "transition"}'><span class="fas fa-recycle" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click)='onModeChange("state")' [ngClass]='{"btn-outline-primary": currentMode ==="state"}'><span class="fas fa-cogs" placement='top'></span></div>
+                    <div class = "btn btn-dark" (click)='onModeChange("transition")' [ngClass]='{"btn-outline-primary": currentMode === "transition"}'><span class="fas fa-recycle" placement='top'></span></div>
                 </div>
             </div>
         </div>
