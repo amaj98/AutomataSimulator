@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {ControlBarComponent} from '../../../control-bar/control-bar.component'
+import { Fsm, FsmState, FsmObject, FsmTransition } from '../Fsm';
 
 @Component({
   selector: 'app-drawfsm',
@@ -8,9 +8,10 @@ import {ControlBarComponent} from '../../../control-bar/control-bar.component'
 })
 export class DrawfsmComponent implements OnInit {
 
+  private selected: FsmObject = null;
   private _mode = 'pointer';
   private zoom = 0;
-
+  
   constructor(){ }
 
   get mode(){return this._mode;}
