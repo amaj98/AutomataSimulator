@@ -16,6 +16,7 @@ export class DrawfsmComponent implements OnInit {
   private radius = 30;
   private fontsize = 15;
   private zoom = 0;
+  private held = false;
   
   constructor(){ }
 
@@ -47,6 +48,22 @@ export class DrawfsmComponent implements OnInit {
   onClickState(evt,state){
     if(this.mode === 'pointer'){
       this.selected = state;
+      this.held = true;
+    }
+  }
+
+  onMouseUp(evt){
+    this.held = false;
+  }
+
+  onMouseMove(evt){
+    
+    if(this.held){
+      if(this.isState()){
+        let moving = this.selected as FsmState;
+        moving.position = this.clientToSurface(evt.x, evt.y);
+        
+      }
     }
   }
 

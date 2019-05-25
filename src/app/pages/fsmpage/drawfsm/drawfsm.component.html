@@ -1,7 +1,7 @@
 <div class = "row justify-content-end">
   <div class = "col">
     <div class = "row canvas bg-info">
-        <svg:svg #canvasSVG width = "100%" height = "100%" (click) = "onClickCanvas($event)">
+        <svg:svg #canvasSVG width = "100%" height = "100%" (mouseup)='onMouseUp($event)' (click) = "onClickCanvas($event)">
           <ng-template ngFor let-state [ngForOf]='fsm.states'>
 
               <svg:rect *ngIf='state===selected' stroke='black' stroke-width='1' [attr.width]='radius*2+2' [attr.height]='radius*2+2' [attr.x]='state.position.x-radius-1' [attr.y]='state.position.y-radius-1'  fill='none' stroke-dasharray="5 2"/>
