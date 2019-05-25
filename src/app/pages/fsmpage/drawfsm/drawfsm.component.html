@@ -10,7 +10,7 @@
               <svg:circle *ngIf='state.final' class='fsm-state-final'  [attr.cx]='state.position.x' [attr.cy]='state.position.y' [attr.r]='radius-2' fill='transparent' stroke='black' stroke-width='1px'></svg:circle>
               <svg:text [attr.x]='state.position.x' [attr.y]='state.position.y' fill='blue' font-weight='bold'  text-anchor='middle' dy='.3em' [attr.font-size]='fontsize'>{{state.label}}</svg:text>
 
-              <svg:circle [attr.cx] = 'state.position.x' [attr.cy] ='state.position.y' [attr.r]='radius' fill='transparent' stroke='none' (click) = onStateClick($event,state)></svg:circle>
+              <svg:circle [attr.cx] = 'state.position.x' [attr.cy] ='state.position.y' [attr.r]='radius' fill='transparent' stroke='none' (mousedown)= onClickState($event,state) (mouseup)='onMouseUp($event)' (mousemove)='onMouseMove($event)'></svg:circle>
           
             </ng-template>
         </svg:svg>

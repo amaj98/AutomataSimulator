@@ -44,7 +44,7 @@ export class DrawfsmComponent implements OnInit {
     }
   }
 
-  onClickState(evt,state:FsmState){
+  onClickState(evt,state){
     if(this.mode === 'pointer'){
       this.selected = state;
     }
