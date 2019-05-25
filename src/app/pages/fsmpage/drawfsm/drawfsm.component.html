@@ -1,10 +1,25 @@
-<div class = "row justify-content-end">
-  <div class = "col">
-    <div class = "row canvas bg-info"><p>canvas <br> Mode: {{_mode}} <br> Zoom: {{zoom}}</p></div>
-    <div class = "row ctrlbar bg-light"><app-ctrlbar [(mode)] = 'mode' (zoom) = "onZoom($event)"></app-ctrlbar></div>
-    <div class = "row bottom bg-secondary"></div>
+<div class='fsm' [style.background]='background' style ='height: 700px'>
+  <div class='row flex-1'>
+      <div class='col-lg-9 col-md-8 col-sm-7 col-12 h-100 w-100 pad0'>
+        <div class='scroll-container'>
+            <app-canvas [fsm]='fsm' [(selected)]='selection' [(mode)]='mode' [dimension]='canvassize' [zoompercent]='zoomPercent'></app-canvas>
+        </div>
+      </div>
+      <div class='col-lg-3 col-md-4 col-sm-5 d-none d-sm-block bg-light h-100 pad0'>
+
+      </div>
   </div>
-  <div class = "col-3 hidden-md-down bg-secondary text-white">
-      Control panel: let user change state names and set start/final states;
+  <div class='row bg-light'>
+      <div class='col-lg-9 col-md-8 col-12 h-100 pad0'>
+          <app-ctrlbar [(mode)]='mode' (zoom)='onCtrlbarZoom($event)'></app-ctrlbar>
+      </div>
+      <div class='col-lg-3 col-md-4 d-none d-md-block bg-light pad0'>
+          <div class='h-100 border-left border-top status-box'>
+              Status box
+          </div>
+      </div>
+  </div>
+  <div class='d-block d-sm-none bg-light status-box'>
+      Status box
   </div>
 </div>

@@ -1,25 +1,37 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {ControlBarComponent} from '../../../control-bar/control-bar.component'
+import { Component, Input } from '@angular/core';
+import { Fsm, FsmObject } from '../fsmobject';
 
 @Component({
   selector: 'app-drawfsm',
   templateUrl: './drawfsm.component.html',
   styleUrls: ['./drawfsm.component.css']
 })
-export class DrawfsmComponent implements OnInit {
+export class DrawfsmComponent {
 
-  private _mode = 'pointer';
-  private zoom = 0;
+  @Input() background = 'none';
+  @Input() canvassize = 4000;
+  get mode() { return this._mode; }
+  set mode(val) { this._mode = val; if (val !== 'pointer') { this.selection = null; } }
+  fsm: Fsm = new Fsm();
+  selection: FsmObject = null;
 
-  constructor(){ }
-
-  get mode(){return this._mode;}
-  set mode(val:string){this._mode = val;}
-  ngOnInit(){
-
+  get zoomPercent() { return this._zoomPercent; }
+  set zoomPercent(val) {
+    if (val >= 50 && val <= 200) {
+      this._zoomPercent = val;
+    }
   }
-  onZoom($event){
-    if($event === 0){this.zoom = 0;}
-    else{this.zoom+=$event;}
+
+  private _zoomPercent = 100;
+  private _mode = 'pointer';
+  constructor() { }
+
+  // ctrlbar event handlers
+  onCtrlbarZoom = (direction) => {
+    const deltaPercent = 10 * direction * -1;
+    this.zoomPercent -= deltaPercent;
+    if (deltaPercent === 0) {
+      this.zoomPercent = 100;
+    }
   }
 }

@@ -9,6 +9,9 @@ import { TuringpageComponent } from './pages/turingpage/turingpage.component';
 import { PushdownpageComponent } from './pages/pushdownpage/pushdownpage.component';
 import { DrawfsmComponent } from './pages/fsmpage/drawfsm/drawfsm.component';
 import { CtrlbarComponent } from './pages/fsmpage/ctrlbar/ctrlbar.component';
+import { CanvasComponent } from './pages/fsmpage/canvas/canvas.component';
+import { StateComponent } from './pages/fsmpage/state/state.component';
+import { TransitionComponent } from './pages/fsmpage/transition/transition.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CtrlbarComponent } from './pages/fsmpage/ctrlbar/ctrlbar.component';
     TuringpageComponent,
     PushdownpageComponent,
     DrawfsmComponent,
-    CtrlbarComponent
+    CtrlbarComponent,
+    CanvasComponent,
+    StateComponent,
+    TransitionComponent
   ],
   imports: [
     BrowserModule,
