@@ -1,8 +1,9 @@
 .navbar{
     height: 100%;
+    width: 949px;
 }
 .row{
-    width: 100vw;
+    width: 100%;
 }
 
 .name{

@@ -17,6 +17,7 @@ export class DrawfsmComponent implements OnInit {
   private fontsize = 15;
   private zoom = 0;
   private held = false;
+  private moving: FsmState = null;
   
   constructor(){ }
 
@@ -54,14 +55,15 @@ export class DrawfsmComponent implements OnInit {
 
   onMouseUp(evt){
     this.held = false;
+    this.moving = null;
   }
 
   onMouseMove(evt){
     
     if(this.held){
       if(this.isState()){
-        let moving = this.selected as FsmState;
-        moving.position = this.clientToSurface(evt.x, evt.y);
+        this.moving = this.selected as FsmState;
+        this.moving.position = this.clientToSurface(evt.x, evt.y);
         
       }
     }
