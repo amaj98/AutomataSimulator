@@ -21,6 +21,8 @@ export class CtrlbarComponent implements OnInit {
   onModeChange(mode){this.currentMode = mode;return false;}
   onZoom(val){this.zoom.emit(val);return false;}
 
+  
+
   ngOnInit() {
   }
 
